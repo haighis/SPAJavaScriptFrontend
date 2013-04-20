@@ -1,0 +1,39 @@
+<section id="session-view" class="view">
+    <h3 class="page-title" data-bind="text: title"></h3>
+    <div class="button-bar">
+        <button class="btn btn-info"
+            data-bind="click: goBack"><i class="icon-hand-left"></i> Back</button>
+        <button class="btn btn-info"
+            data-bind="click: cancel, enable: canSave"><i class="icon-undo"></i> Cancel</button>
+        <button class="btn btn-info"
+                data-bind="click: save, enable: canSave"><i class="icon-save"></i> Save</button>
+     <button class="btn btn-danger"
+                data-bind="click: deleteBookmark">
+            <i class="icon-trash"></i> Delete
+        </button>
+   
+    </div>
+    <div data-bind="with: bookmark">    
+        <div class="titleblock">
+            <label for="title">Title</label>
+            <input id="title" data-bind="value: title" 
+                placeholder="Title"/> 
+                <a target="_blank" data-bind="attr: {href: url, title: title}">Go</a>
+        </div>
+        <div class="details-left">
+            <div>
+                <label for="url">Url</label>
+                <input data-bind="value: url" placeholder="Url"/>
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <input data-bind="value: description" placeholder="Description"/>
+                
+                
+            </div>
+        </div>
+        <div class="details-right">
+            
+        </div>
+    </div>
+</section>

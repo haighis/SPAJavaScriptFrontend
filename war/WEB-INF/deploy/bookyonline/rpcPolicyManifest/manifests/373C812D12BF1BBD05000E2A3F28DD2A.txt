@@ -1,0 +1,2 @@
+serviceClass: com.bookyonline.client.GreetingService
+path: CD692058421EE9AA174CE4708F9DAAFD.gwt.rpc
